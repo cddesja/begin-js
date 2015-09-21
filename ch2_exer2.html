@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”> <html xmlns=”http://www.w3.org/1999/xhtml”>
+<body>
+	<script languague="JavaScript" type="text/javascript">
+
+	var firstNumber = prompt("Enter the first number", "");
+	var secondNumber = prompt("Enter the second number", "");
+	var theTotal;
+	
+	// Wrong because we are adding two strings!
+	theTotal = firstNumber + secondNumber;
+	document.write(firstNumber + " added to " + secondNumber + " equals " + theTotal + "<br>");
+
+	// Correct!
+	theTotal = parseInt(firstNumber) + parseInt(secondNumber);
+	document.write(firstNumber + " added to " + secondNumber + " equals " + theTotal);
+	</script>
+</body>
+</html>
