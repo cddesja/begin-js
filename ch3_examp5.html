@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script type="text/javascript">
+	function convert_to_centigrade(degFahren)
+	{
+		var degCent;
+		degCent = 5 / 9 * (degFahren - 32);
+		return degCent;
+	}
+
+	var degFahren = new Array(212, 32, -495.15);
+	var degCent = new Array();
+	var loopCounter;
+
+	for(loopCounter in degFahren)
+	{
+		degCent[loopCounter] = convert_to_centigrade(degFahren[loopCounter]);
+	}
+
+
+	for(loopCounter in degCent)
+	{
+		document.write("Value " + loopCounter + " was " + degFahren[loopCounter] + " degress Fahrenheit");
+		document.write(" which is " + degCent[loopCounter] + " degrees centigrade<br />");
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script type="text/javascript">
+
+function multiple_tables(multi, start, end)
+	{
+		while(start <= end){
+			document.write(multi + " * " + start + " = " + multi*start + "<br/>");
+			start++;
+		}
+	}
+
+alert("This JavaScript code will calculate the multiplications table. You provide the value that you want to find the multiples of, the lower value, and the maximum value. To exit this you need to enter -1.");
+
+
+// this value is "undefined". it seems safer to set this to 0.
+var multi = 0;
+while (multi != -1){	
+	var multi = Number(prompt("Please enter the multiplication table you would like:", ""));
+
+	if (multi == -1)
+	{
+		alert("Thanks. This applet will now exit.");
+		break;
+	}
+
+	while(isNaN(multi))
+		{
+			alert("Please enter a number!");
+			multi = Number(prompt("Please enter the multiplication table you would like:", ""));
+			if (multi == -1)
+			{
+				alert("Thanks. This applet will now exit.");
+				break;
+			}
+		}
+
+	var start = Number(prompt("What should be the lowest multiple?", ""));
+	
+	while(isNaN(start))
+		{
+			alert("Please enter a number!");
+			start = Number(prompt("What should be the lowest multiple?", ""));
+		}
+
+	var end = Number(prompt("What should be the greatest multiple?", ""));
+
+	while(isNaN(end))
+		{
+			alert("Please enter a number!");
+			end = Number(prompt("What should be the greatest multiple?", ""));
+		}
+
+	// Run the multiplications table function	
+	multiple_tables(multi, start, end);
+	}
+</script>
+
+</body>
+</html>
