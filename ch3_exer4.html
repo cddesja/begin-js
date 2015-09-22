@@ -19,22 +19,19 @@ var multi = 0;
 while (multi != -1){	
 	var multi = Number(prompt("Please enter the multiplication table you would like:", ""));
 
+	
+	while(isNaN(multi))
+		{
+			alert("Please enter a number!");
+			multi = Number(prompt("Please enter the multiplication table you would like:", ""));
+		}
+
 	if (multi == -1)
 	{
 		alert("Thanks. This applet will now exit.");
 		break;
 	}
 
-	while(isNaN(multi))
-		{
-			alert("Please enter a number!");
-			multi = Number(prompt("Please enter the multiplication table you would like:", ""));
-			if (multi == -1)
-			{
-				alert("Thanks. This applet will now exit.");
-				break;
-			}
-		}
 
 	var start = Number(prompt("What should be the lowest multiple?", ""));
 	
